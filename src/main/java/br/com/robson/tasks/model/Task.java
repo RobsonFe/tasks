@@ -13,6 +13,12 @@ public class Task {
         return this;
     }
 
+    public Task insert(){
+        return builderFrom(this)
+                .state(TaskState.TODO)
+                .build();
+    }
+
     public Task() {}
 
     public Task(Builder builder) {
